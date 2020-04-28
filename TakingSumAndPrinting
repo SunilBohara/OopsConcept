@@ -1,0 +1,43 @@
+package PraticeOnly;
+import java.util.Scanner;
+public class monthlybonus {
+    
+    public void zTot(int usernum) {
+        boolean [] numbers = new boolean[11];
+        
+        for (int i = 0; i < 11; i++) {
+            numbers[i] = true;
+        }
+        
+        if (usernum<11) {
+            try {
+                for (int i = -1; i < usernum; i--) {
+                System.out.println(numbers[i]);
+            }    
+            } catch (Exception e) {
+                System.out.println("");
+            }
+        } else {
+            System.out.println("The number is false");
+        }
+    }
+    
+    public static void main(String argsp[]) {
+        Scanner sc = new Scanner(System.in);
+        int fn,sn;
+        
+        System.out.print("First Number : ");
+        fn = sc.nextInt();
+        System.out.print("Second Number : ");
+        sn = sc.nextInt();
+        
+        if(fn<=sn) {
+           for(fn=fn; fn<=sn; fn++) {
+            System.out.println(fn);
+        }
+            
+        } else {
+            System.out.println("Invalid First Number is Greater");
+        }
+    }
+}
